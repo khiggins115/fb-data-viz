@@ -1,0 +1,27 @@
+
+svg {
+	border: 1px solid #eee;
+}
+.dc-chart g.row text {
+    font-weight: bold;
+    font-size: 14px;
+		fill: #000;
+    /*text-shadow: 1px 0px #000000, 0px 1px #000000, -1px 0px #000000, 0px -1px #000000;*/
+}
+.pie-small svg {
+	border: none;
+}
+#active-filters li:empty {
+	display: none;
+}
+.active-title-text {
+	font-style: italic;
+}
+.active-filters-text {
+	font-weight: 600;
+}
+
+div.dc-chart{
+	float: none;
+
+}
