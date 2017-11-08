@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Mays Facebook Data Viz</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.min.css">
+  		<link rel="stylesheet" href="css/custom.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <header class="row header">
+        <div class="col-md-12">
+          <h1>Mays Business School Facebook Data Viz</h1>
+            <small>
+              <span class="filter-count"></span> selected out of <span class="total-count"></span> records |
+              <a id="all" href="#">Reset All</a>
+            </small>
+        </div>
+      </header>
+
+    <hr>
+
+<!-- TOTAL STATUSES BY TIME (YEAR, MONTH, DAY, [ HOUR[0-24] ] ) -->
+    <div class="row" id="control-row">
+      <div class="chart-sm col-xs-4">
+        <h4>Year <small><a id="year" >reset</a></small></h4>
+        <div class="dc-chart" id="year-ring-chart"></div>
+      </div>
+      <div class="chart-sm col-xs-4">
+        <h4>Month <small><a id="month" >reset</a></small></h4>
+        <div class="dc-chart" id="month-ring-chart"></div>
+      </div>
+      <div class="chart-sm col-xs-4">
+        <h4>Day <small><a id="day" >reset</a></small></h4>
+        <div class="dc-chart" id="day-ring-chart"></div>
+      </div>
+<!--
+      <div class="chart-sm col-xs-3">
+        <h4>Hour <small><a id="hour" >reset</a></small></h4>
+        <div class="dc-chart" id="hour-ring-chart"></div>
+      </div>
+-->
+    </div> <!-- row w/4 small charts -->
+
+<!-- TOTAL STATUSES BY TYPE -->
+    <div class="row">
+      <h3>Status Type <small><a id="type" >reset</a></small></h3>
+      <div class="chart-lg col-xs-12" id="status-type-row-chart"></div>
+    </div><!-- row w/1 large chart, status type -->
+
+<!-- AVERAGE LIKES PER MONTH -->
+    <div class="row">
+      <h3>Likes <small><a id="likes" >reset</a></small></h3>
+      <div class="chart-lg col-xs-12" id="num-likes-line-graph"></div>
+    </div><!-- row w/1 large chart, avg likes -->
+
+  </div>
+
+    <!-- load scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/crossfilter.js" ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.min.js"></script>
+    <script src="js/site.js" ></script>
+  </body>
+</html>
